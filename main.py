@@ -48,7 +48,7 @@ def get_content(html):
 
 
 def save_file(items, path):
-     with open(path, 'w', newline='') as file:
+     with open(path, 'w', newline='', encoding='utf-8') as file:
         fieldnames = ['Видеокарта', 'Цена', 'Код товара', 'Ссылка']
         writer = csv.DictWriter(file, fieldnames=fieldnames, delimiter=';')
         writer.writeheader()
